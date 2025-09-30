@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esxape Ride — Mission</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <picture>
+      <source srcset="assets/logo.webp" type="image/webp"/>
+      <img src="assets/logo.png" alt="Esxape Ride" onerror="this.replaceWith(Object.assign(document.createElement('div'),{textContent:'ESXAPE RIDE',style:'font-weight:700'}))"/>
+    </picture>
+    <span class="title">Mission</span>
+    <span id="modeBadge" class="badge">Mode</span>
+    <button id="musicToggle" class="btn music-toggle">Music: Off</button>
+  </header>
+  <main>
+    <section class="controls">
+      <button id="beginBtn">▶ Begin</button>
+      <button id="stopBtn" disabled>■ Stop</button>
+      <span id="status">Waiting…</span>
+    </section>
+    <section class="map-panel">
+      <div id="map">
+        <button id="backpackBtn" title="Backpack">
+          <img alt="" src="assets/backpack.svg" />
+          <span>Backpack</span>
+        </button>
+      </div>
+      <aside class="legend"><h3>Objective</h3><ul id="checkpointList"></ul></aside>
+    </section>
+    <section id="cluePanel" class="clue hidden">
+      <h2 id="clueTitle">Clue</h2>
+      <p id="clueText"></p>
+    </section>
+  </main>
+
+  <div id="bpModal">
+    <div id="bpCard">
+      <div id="bpHead">
+        <h3>Your Backpack</h3>
+        <button id="bpClose">✕ Close</button>
+      </div>
+      <div id="bpList">
+        <div class="bpEmpty">No items collected yet.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="videoOverlay">
+    <button id="overlayClose">✕ Close</button>
+    <div class="wrap" id="videoWrap"></div>
+  </div>
+
+  <audio id="stingMission" src="assets/sting_start.wav" preload="auto"></audio>
+  <audio id="chime" src="assets/chime.wav" preload="auto"></audio>
+  <audio id="music2" src="assets/music.wav" preload="auto" loop></audio>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

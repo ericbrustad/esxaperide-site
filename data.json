@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cp1",
+    "order": 1,
+    "title": "Checkpoint 1",
+    "lat": 44.822935,
+    "lng": -93.301314,
+    "radius_m": 60,
+    "video_url": "https://youtu.be/tJHG6xYVuMY",
+    "clue_text": "You found the first location. Look for the hidden mark and note its color."
+  },
+  {
+    "id": "cp2",
+    "order": 2,
+    "title": "Checkpoint 2",
+    "lat": 44.824599,
+    "lng": -93.292912,
+    "radius_m": 60,
+    "video_url": "https://youtu.be/rKo4iLr-L1U",
+    "clue_text": "Stay sharp. Count the nearest lights and keep that number for later."
+  },
+  {
+    "id": "cp3",
+    "order": 3,
+    "title": "Checkpoint 3",
+    "lat": 44.826592,
+    "lng": -93.295035,
+    "radius_m": 60,
+    "video_url": "https://youtu.be/RoMkYGt34FA",
+    "clue_text": "Final rendezvous. Find the letter etched in plain sight\u2014report it to HQ."
+  }
+]

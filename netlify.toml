@@ -1,0 +1,5 @@
+
+[build]
+  functions = "netlify/functions"
+
+# Keep other settings (redirects etc.) in your existing project.

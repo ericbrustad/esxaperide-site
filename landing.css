@@ -1,0 +1,41 @@
+
+:root{
+  --bg:#0b0f14; --fg:#eaeff7; --muted:#9fb2c7; --accent:#6ee7b7; --card:#10161d; --border:#1f2a36; --danger:#ef4444;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji'}
+.wrap{max-width:840px;margin:32px auto;padding:16px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;margin-bottom:16px}
+.logo{font-size:48px}
+.title{margin:0;font-size:32px;letter-spacing:.3px}
+.tag{margin:0;color:var(--muted)}
+
+form{display:flex;flex-direction:column;gap:16px}
+.card{border:1px solid var(--border);background:var(--card);border-radius:14px;padding:16px}
+.card legend{padding:0 6px;color:var(--muted)}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
+input[type="text"],input[type="email"],input[type="tel"]{
+  background:#0e141b;border:1px solid var(--border);color:var(--fg);border-radius:10px;
+  padding:10px 12px;font-size:16px;outline:none;
+}
+input:focus{border-color:#304254;box-shadow:0 0 0 2px rgba(110,231,183,.2)}
+.hint{color:var(--muted);font-size:12px;margin-top:8px}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){ .grid{grid-template-columns:1fr} }
+
+.checks{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.check{display:flex;align-items:flex-start;gap:8px;font-weight:500;color:var(--muted)}
+.check input{margin-top:4px}
+
+.actions{display:flex;align-items:center;gap:12px}
+#beginBtn{
+  appearance:none;border:none;background:var(--accent);color:#052219;font-weight:800;
+  padding:12px 16px;border-radius:12px;cursor:pointer;font-size:16px;
+}
+#beginBtn:disabled{opacity:.6;cursor:not-allowed}
+#status{min-height:20px;font-size:14px;color:var(--muted)}
+
+.fine{margin-top:12px;color:var(--muted);font-size:12px;text-align:center}
+.error{color:var(--danger)}
+.success{color:var(--accent)}

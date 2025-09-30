@@ -1,0 +1,60 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;margin:0;background:#0b0f16;color:#e6e6e6}
+a,button{cursor:pointer}
+/* Splash */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(1200px 600px at 50% -10%, #162032, #0b0f16)}
+.panel{text-align:center;padding:32px}
+.logo{height:90px;object-fit:contain;margin-bottom:14px}
+h1{font-size:40px;margin:8px 0 6px 0;letter-spacing:.5px}
+.tagline{opacity:.85;margin:0 0 18px 0}
+.btn{padding:12px 18px;border:1px solid #2a3242;background:#121a28;border-radius:14px;color:#e6e6e6;font-weight:600}
+.toggle{margin-top:12px;display:inline-flex;gap:8px;align-items:center;border:1px solid #2a3242;border-radius:999px;padding:6px 10px;background:#121a28}
+.toggle .pill{padding:6px 10px;border-radius:999px;background:#0b0f16;border:1px solid #2a3242}
+.footer{position:fixed;left:0;right:0;bottom:0;text-align:center;padding:10px;opacity:.6}
+/* Mission */
+header{padding:14px 16px;border-bottom:1px solid #1b2230;background:#0e1522;display:flex;align-items:center;gap:10px}
+header picture, header img{height:40px;display:block}
+header .title{font-size:20px;font-weight:700}
+.badge{margin-left:auto;padding:4px 8px;border:1px solid #334155;border-radius:999px;font-size:12px;opacity:.85}
+.music-toggle{margin-left:8px}
+main{padding:16px;max-width:1100px;margin:0 auto}
+.controls{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+button{padding:10px 14px;border:1px solid #2a3242;background:#121a28;color:#e6e6e6;border-radius:12px}
+.map-panel{display:grid;grid-template-columns:3fr 1fr;gap:16px;height:62vh}
+#map{width:100%;height:100%;border-radius:14px;overflow:hidden;border:1px solid #1b2230;background:#000;position:relative}
+.legend{background:#0e1522;border:1px solid #1b2230;border-radius:14px;padding:12px;overflow:auto}
+.legend h3{margin:0 0 8px 0}
+.legend ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.legend li{padding:8px;border:1px solid #1b2230;border-radius:10px;background:#0b101b}
+.clue{margin-top:16px;padding:16px;background:#0e1522;border:1px solid #1b2230;border-radius:14px}
+.hidden{display:none}
+#videoOverlay{position:fixed;inset:0;display:none;background:#000;z-index:10000}
+#videoOverlay .wrap{position:absolute;inset:0;padding:0;margin:0}
+#videoOverlay iframe,#videoOverlay video{width:100%;height:100%;border:0;display:block}
+#overlayClose{position:absolute;top:12px;right:12px;z-index:10001;border:1px solid #2a3242;background:#0b0f16;color:#eee;border-radius:10px;padding:8px 10px}
+.pulse-dot{width:14px;height:14px;background:#3b82f6;border-radius:50%;box-shadow:0 0 0 0 rgba(59,130,246,0.7);animation:pulse 1.5s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(59,130,246,0.7)}70%{box-shadow:0 0 0 12px rgba(59,130,246,0)}100%{box-shadow:0 0 0 0 rgba(59,130,246,0)}}
+/* Backpack button overlay */
+#backpackBtn{position:absolute;left:12px;bottom:12px;z-index:500;display:flex;align-items:center;gap:8px;background:#ffffffee;color:#111;border:1px solid #e5e7eb;padding:8px 10px;border-radius:999px}
+#backpackBtn img{width:20px;height:20px;display:block}
+#backpackBtn span{font-weight:700;font-size:13px}
+/* If overlay isn't possible (older browsers), show below map */
+.no-overlay #backpackBtn{position:static;margin-top:8px}
+/* Backpack modal (light theme) */
+#bpModal{position:fixed;inset:0;display:none;background:rgba(0,0,0,0.6);z-index:11000}
+#bpCard{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw, 720px);max-height:80vh;overflow:auto;background:#fff;color:#111;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.35);border:1px solid #e5e7eb}
+#bpHead{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #f0f2f5}
+#bpHead h3{margin:0;font-size:18px}
+#bpClose{background:#111;color:#fff;border:none;border-radius:10px;padding:6px 10px}
+#bpList{padding:12px;display:grid;grid-template-columns:1fr;gap:12px}
+.bpItem{display:grid;grid-template-columns:120px 1fr;gap:12px;border:1px solid #f0f2f5;border-radius:12px;padding:10px;background:#fafafa}
+.bpItem img{width:120px;height:90px;object-fit:cover;border-radius:10px;border:1px solid #e5e7eb}
+.bpItem .meta{display:flex;flex-direction:column;gap:4px}
+.bpItem .meta .title{font-weight:700}
+.bpItem .meta .clue{font-size:14px;color:#333}
+.bpEmpty{padding:18px;text-align:center;color:#555}
+@media (max-width: 900px){
+  .map-panel{grid-template-columns:1fr;grid-template-rows:auto auto;height:auto}
+  #map{height:50vh}
+  .bpItem{grid-template-columns:1fr}
+}

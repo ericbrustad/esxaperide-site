@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skavenger Hunt 2 — Access</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="logo">🧭</div>
+      <h1 class="title">Skavenger Hunt 2</h1>
+      <p class="tag">Welcome, Agent. Enter your access code to begin.</p>
+    </header>
+
+    <form id="accessForm" novalidate>
+      <fieldset class="card">
+        <legend>Access Code</legend>
+        <label>Stripe Code
+          <input type="text" name="code" id="code" placeholder="Enter code (e.g., TEST-1234)" required>
+        </label>
+        <small class="hint">After purchasing, you'll receive a code. Enter it here to unlock the game.</small>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend>Your Details</legend>
+        <div class="grid">
+          <label>First name
+            <input type="text" name="firstName" id="firstName" autocomplete="given-name" required>
+          </label>
+          <label>Last name
+            <input type="text" name="lastName" id="lastName" autocomplete="family-name" required>
+          </label>
+        </div>
+        <div class="grid">
+          <label>Cell phone
+            <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" id="email" placeholder="you@example.com" autocomplete="email" required>
+          </label>
+        </div>
+
+        <div class="checks">
+          <label class="check">
+            <input type="checkbox" id="consent" required>
+            <span>I agree to receive game messages (SMS & email) related to this experience.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="terms" required>
+            <span>I agree to the <a href="#" target="_blank" rel="noopener">Terms</a> & <a href="#" target="_blank" rel="noopener">Privacy</a>.</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button id="beginBtn" type="submit">Enter Game</button>
+        <div id="status" role="status" aria-live="polite"></div>
+      </div>
+    </form>
+
+    <footer class="fine">
+      <p>This page will remember your profile on this device so you can continue later.</p>
+    </footer>
+  </main>
+
+  <script src="landing.js"></script>
+</body>
+</html>
